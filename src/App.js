@@ -41,7 +41,7 @@ class App extends React.Component {
       users: this.state.users.map((user) => {
 
 
-        if (user.id == attrs.id && attrs.value !== "") {
+        if (user.id == attrs.id) {
 
           return Object.assign({}, user, {
             login: attrs.value,

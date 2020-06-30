@@ -14,8 +14,9 @@ class CardUpdateForm extends React.Component {
     this.props.changeType(e.target)
   };
 
-  handleUpdateClick = () => {                              // Passing form change handler to parent
-    this.props.toggleForm()
+  handleUpdateClick = () => {  
+    const formName = document.getElementById(this.props.id).value;                           // Passing form change handler to parent
+    formName==="" ? window.alert("Username cannot be empty!"):this.props.toggleForm()
 
   }
 
@@ -40,7 +41,7 @@ class CardUpdateForm extends React.Component {
           <div className="content">
             <div className="ui right labeled input">
 
-              <input placeholder={this.props.login} type="text" id={this.props.id} onChange={this.handleNameChange} ></input>
+              <input value={this.props.login} name="form" type="text" id={this.props.id} onChange={this.handleNameChange} ></input>
               <a className="ui label" onClick={this.handleUpdateClick}>Update</a>
             </div>
             <div className="ui hidden divider"></div>
