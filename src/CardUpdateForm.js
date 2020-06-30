@@ -49,7 +49,8 @@ class CardUpdateForm extends React.Component {
               <select className="ui teal dropdown" onClick={this.handleTypeChange}>
 
                 <option value="User" >User</option>
-                <option value="Admin" >Admin</option>
+                <option value="Organization" >Organization</option>
+                <option value="Enterprise" >Enterprise</option>
               </select>
             </div>
           </div>
